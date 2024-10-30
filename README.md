@@ -8,6 +8,18 @@ This repository contains the work for the **"Study Project"** module focused on 
 - **Data Analysis**: Analyze the data to identify patterns and correlations related to climate change.
 - **Visualization**: Create clear and impactful visualizations that illustrate the temperature rise due to climate change.
 
+## Quellen
+| Paper | Inhalt | Name |
+| ----- | ------ | ---- |
+|       |        |      |
+|       |        |      |
+|       |        |      |
+|       |        |      |
+|       |        |      |
+|       |        |      |
+|       |        |      |
+|       |        |      |
+
 ## Notes 29.10.2024
 Render an animation with unity. For each chosen spot extend existing city 3D model by textures. For each spot develop some projects as "Prinzipalmarkt 2035". Create animations for each year, some static (new buildings) and some dynamic (color grading) changes. Control animation (year, spot) via controller/website on smarthpone/overlay on IVE.
 - Best Case options: moving animation, multiple spots, many years -> more static changes, better dynamic change
