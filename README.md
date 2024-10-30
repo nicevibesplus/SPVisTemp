@@ -9,9 +9,9 @@ This repository contains the work for the **"Study Project"** module focused on 
 - **Visualization**: Create clear and impactful visualizations that illustrate the temperature rise due to climate change.
 
 ## Quellen
-| Paper | Inhalt | Name |
-| ----- | ------ | ---- |
-|       |        |      |
+| Paper | Inhalt | # | Name |
+| ----- | ------ | ---- | --- |
+|       |        |      |     |
 |       |        |      |
 |       |        |      |
 |       |        |      |
