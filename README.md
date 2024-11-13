@@ -62,9 +62,40 @@ Contra:
 ## Ideen für die Storyline 
 
 Szenario: 
+- Auswahl eines Klimaszenarios 1,2 oder 3 und über App Steuerung der Zeit chronologisch auswählbar. Bei Auswahl eines Jahres wird eine Art Video abgespielt die den Übergang beschreibt. 
+- Die Maßnahmen können nach jedem Zeitsprung aktiviert werden. Pro Zeitsprung kommen mehr Maßnahmen hinzu. Die Maßnahmen bleiben bei Wechsel der Zeit in die Zukunft bestehen.  
+- Sobald der Nutzer alle Jahre gesehen hat, kann er frei hin und her wechseln.
 - von 2024 - 2100
 - 2 Orte: Aasee mit viel Vegetation, Straße in der Stadt mit wenig Vegetation (bauliche Maßnahmen sichtbar machen)
 - Temperaturauswahl: Klimadaten vom Geo1: Durchschnitt vom Tageshöchstwert vom 01.-31. Juli 2024 + Temperaturzunahme nach IPCC über die Jahre
+- an die einzelnen Folgen (z.B. toter Baum) sollen Popups platziert werden, in diesen wird der User genauer informiert
+
+Folgen:
+2040: 
+  - Baum: braune Blätter, sieht kränklich aus
+  - gelber Rasen
+  - 
+2060:
+  - Baum verliert Blätter
+  - weniger Menschen
+  - sehr gelber, brauner Rasen
+  - Menschen mit Sonnenschirm, Hüten
+  - 
+2080:
+  - Baum umgekippt
+  - brauner Rasen, Matschwiese
+  - kaum noch Menschen
+2100:
+  - Baum weg
+  - Menschen weg
+  - Rasen weg
+  - Wasserstand sehr niedrig
+
+Zusätzliche Ideen:
+- Flimmern über Asphalt
+- Gelblicher Schleier á la Sahara Sturm
+- Starkregen animieren mit Folgen wie stehendem Wasser auf der Wiese
+- Popup mit Nahaufnahme von toten Fischen
 
 - 
 konkrete Maßnahmen: 
