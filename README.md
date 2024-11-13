@@ -22,6 +22,15 @@ This repository contains the work for the **"Study Project"** module focused on 
 |  [IPCC Synthesebericht AR6](https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf) + <br> [Abbildungen](https://www.ipcc.ch/report/ar6/syr/figures/)    |  Current trends: <br> - global surface temperature reached +1.1°C above levels of 1850-1900 in 2011-2020 <br> - avg. 1.09 [0.95 to 1.20]°C <br> - increases over land 1.59 [1.34 to 1.83]°C <br> - increases over the ocean 0.88 [0.68 to 1.01]°C <br> - dominant GHG (Greenhouse Gases) are CO₂ and methane (CH₄) <br> - between 2015 and 2020 about 67-72% of emissions can be attributed to urban areas <br> - “The drivers of urban GHG emissions are complex and include population size, income, state of urbanization and urban form” <br> - “Approximately half of the species assessed globally have shifted polewards or, on land, also to higher elevations” <br> - Heatwaves in urban areas have intensified, which also worsened air pollution events (p. 50) <br> - 1.5°C will be reached in the first half of the 2030s and 2.0°C towards end of the century <br> Mitigation actions: <br> - Laws focused on reducing GHG emissions in 56 countries by 2020, covering 53% of global emissions <br> - Uneven across sectors; often limited for emissions from agriculture, industrial materials and feedstocks <br> - Comprehensive and consistent policy changes are more effective than single policies <br> o e.g. combining mitigation policies with policies that shift development pathways and/or induce lifestyle/behaviour changes <br> - for example promoting walkable urban areas and electrification => better air quality and better active mobility <br> - about 60% of adaptations are water-related, with a large number in the agricultural sector <br> - Most innovations in urban areas have been in disaster risk management, social safety nets and green/blue infrastructure <br> - Increased evidence of maladaptations in urban areas, for example new urban infrastructure that cannot be adjusted easily or affordably <br> Long-Term adaptation options and limits: <br> - Effectiveness of adaptations will be less the higher the warming <br> - Agricultural up to 2°C <br> - Hydropower and thermos-electric power generation up to 1.5 – 2°C <br> - Ecosystem-based adaptations steadily declining with increasing warming <br> - (Agro-)Forestry up to 3°C, then sharp decline <br> - Adapaptations to address heat mortality and heat stress etc. face soft and hard limits at about 1.5°C, more severe in already warm climates <br> - Soft adaptation limits can be overcome <br> - Adaptations will not be able to prevent all losses and damages <br> - Maladaptations can create “lock-in effects” and cause vulnerabilities <br> Remaining Carbon budget: <br> - Every 1000Gt CO₂ emitted by human activity, global mean temperature rises by likely 0.27°C to 0.63°C (with the best estimate of 0.45°C) <br> - Implies that only a set amount of CO₂ can be emitted, that cannot be exceeded <br> - Estimates of the remaining carbon budget (RCB) from the beginning of 2020: <br> - Limit warming to 1.5°C => RCB = 500Gt (50% likelihood) <br> - Limit warming to 2°C => RCB = 1150Gt (67% likelihood) <br> - RCB can be higher or lower depending on non-CO₂ emissions, e.g. the RCB of the 50% likelihood of limiting warming to 1.5°C could wary between 300 to 600Gt <br> - If emissions stay the same RCB for 1.5°C will almost be exhausted at the end of the decade and more than a third of the RCB for 2°C will be exhausted <br> - Land and ocean carbon sinks will take up more CO₂ in scenarios with rising emissions, but will be less effective <br> Net Zero Emissions: Timing and Implications <br> - Goal will of course be to reach a net zero or negative emissions <br> - Timing of net zero CO₂ followed by net zero GHG emissions is set for different scenarios: <br> - Limit warming to 1.5°C: <br> - Net zero CO₂ reached in early 2050s with no or minimal overshoot <br> - Limit warming to 2°C: <br> - Net zero CO₂ reached in early 2070s <br> - GHG emissions are strongly reduced in all pathways <br> - Negative CO₂ emissions could counterbalance a later reduction in GHG emissions (BUT THIS ONLY WORKS IF THE GHG EMISSIONS ARE RESIDUAL (about 8Gt per year)) <br> - This would mean net zero CO₂ would be reached before net zero GHGs <br> - Carbon capture and carbon storages are excluded from modelled pathways <br> Overshoot Pathways: <br> - The more overshoot the more net negative CO₂ is needed to return to a given warming level <br> - Reducing global temperature with no or limited overshoot would require 220Gt of negative CO₂ for about every tenth of a degree <br> - With high overshoot this increases to 360Gt <br> Timing and urgency of climate action: <br> - 1.5°C pathways model that GHG emissions are reduced by 43% by 2030 compared to 2019, 60% by 2035, 69% by 2040 and 84% by 2050 <br> - 2°C pathways model that GHG emissions are reduced by 21% by 2030 compared to 2019, 35% by 2035, 46% by 2040 and 64% by 2050 <br> - Mitigation options costing USD 100 tCO2-〖eq〗^(-1) or less could reduce 151 global GHG emissions by at least half the 2019 level by 2030 <br> - Large contributions to GHG emissions reductions can come from options costing less than USD 20 tCO2-〖eq〗^(-1)  |  - Generelle Daten und Fakten zum Klimawandel weltweit <br> - Informationen zu Temperatur- und Emissionstrends <br> - Warnungen vor Folgen bezogen auf verschiedene Szenarien    | Philip |
 |      |        |      |     |
 
+## Klimaszenarien mit Folgen
+
+||°C|Szenario 1|°C|Szenario 2|°C|Szenario 3|
+|---|---|---|---|---|---|---|
+|2040|
+|2060|
+|2080|
+|2100|
+
 ## Ideen für Ort der Visualisierung
 **Prinzipalmarkt** <br> Pro: 
 - sofortiges Erkennungsmerkmal für Münster
@@ -51,11 +60,19 @@ Contra:
 ...Hier weitere Orte...
 
 ## Ideen für die Storyline 
+
+Szenario: 
+- von 2024 - 2100
+- 2 Orte: Aasee mit viel Vegetation, Straße in der Stadt mit wenig Vegetation (bauliche Maßnahmen sichtbar machen)
+- Temperaturauswahl: Klimadaten vom Geo1: Durchschnitt vom Tageshöchstwert vom 01.-31. Juli 2024 + Temperaturzunahme nach IPCC über die Jahre
+
+- 
 konkrete Maßnahmen: 
 - Trinkbrunnen
 - Begrünung von Dächern/Fassaden
 - Pflanzung von Bäumen
 - 
+
 
 ## Notes 29.10.2024
 Render an animation with unity. For each chosen spot extend existing city 3D model by textures. For each spot develop some projects as "Prinzipalmarkt 2035". Create animations for each year, some static (new buildings) and some dynamic (color grading) changes. Control animation (year, spot) via controller/website on smarthpone/overlay on IVE.
