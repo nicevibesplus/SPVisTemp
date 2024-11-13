@@ -23,6 +23,10 @@ This repository contains the work for the **"Study Project"** module focused on 
 |      |        |      |     |
 
 ## Ideen für Ort der Visualisierung
+Prinzipalmarkt <br> Pro: <br> - sofortiges Erkennungsmerkmal für Münster <br> Contra: <br> - keine Vegetation <br> - schwerige Texturen <br>
+Schlossplatz <br> Pro: <br> - Vegetation vorhanden <br> - Merkmal für Münster <br> - vermutlich einfach umsetzbar(?) <br> Contra: <br>
+Aasee <br> Pro: <br> Contra: <br> 
+...Hier weitere Orte...
 
 ## Ideen für die Storyline 
 
