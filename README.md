@@ -23,12 +23,29 @@ This repository contains the work for the **"Study Project"** module focused on 
 |      |        |      |     |
 
 ## Ideen für Ort der Visualisierung
-Prinzipalmarkt <br> Pro: <br> - sofortiges Erkennungsmerkmal für Münster <br> Contra: <br> - keine Vegetation <br> - schwerige Texturen <br>
-Schlossplatz <br> Pro: <br> - Vegetation vorhanden <br> - Merkmal für Münster <br> - vermutlich einfach umsetzbar(?) <br> Contra: <br>
-Aasee <br> Pro: <br> Contra: <br> 
+**Prinzipalmarkt** <br> Pro: 
+- sofortiges Erkennungsmerkmal für Münster
+
+Contra:
+- keine Vegetation 
+- schwerige Texturen 
+
+**Schlossplatz** <br> Pro:
+- Vegetation vorhanden
+- Merkmal für Münster
+- vermutlich einfach umsetzbar(?)
+
+Contra: 
+
+
 ...Hier weitere Orte...
 
 ## Ideen für die Storyline 
+konkrete Maßnahmen: 
+- Trinkbrunnen
+- Begrünung von Dächern/Fassaden
+- Pflanzung von Bäumen
+- 
 
 ## Notes 29.10.2024
 Render an animation with unity. For each chosen spot extend existing city 3D model by textures. For each spot develop some projects as "Prinzipalmarkt 2035". Create animations for each year, some static (new buildings) and some dynamic (color grading) changes. Control animation (year, spot) via controller/website on smarthpone/overlay on IVE.
