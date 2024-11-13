@@ -37,6 +37,16 @@ Contra:
 
 Contra: 
 
+**Aaseekugeln** <br> Pro:
+- vermutlich einfache Umsetzung, da keine Gebäude
+- diverse Vegetation
+- Gewässer
+- Menschen
+- Rasen
+
+Contra:
+- keine Gebäude, um bauliche Maßnahmen zu zeigen
+
 
 ...Hier weitere Orte...
 
