@@ -67,7 +67,7 @@ Szenario:
 - Sobald der Nutzer alle Jahre gesehen hat, kann er frei hin und her wechseln.
 - von 2024 - 2100
 - 2 Orte: Aasee mit viel Vegetation, Straße in der Stadt mit wenig Vegetation (bauliche Maßnahmen sichtbar machen)
-- Temperaturauswahl: Klimadaten vom Geo1: Durchschnitt vom Tageshöchstwert vom 01.-31. Juli 2024 = **23.12 °C** + Temperaturzunahme nach IPCC über die Jahre
+- Temperaturauswahl: Klimadaten vom Geo1: Durchschnitt vom Tageshöchstwert vom 01.-31. Juli 2024 = **23,12 °C** (für August wären es **24,7 °C** )+ Temperaturzunahme nach IPCC über die Jahre
 - an die einzelnen Folgen (z.B. toter Baum) sollen Popups platziert werden, in diesen wird der User genauer informiert
 
 Folgen:
