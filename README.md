@@ -98,13 +98,24 @@ Zusätzliche Ideen:
 - Starkregen animieren mit Folgen wie stehendem Wasser auf der Wiese
 - Popup mit Nahaufnahme von toten Fischen
 
-- 
 konkrete Maßnahmen: 
 - Trinkbrunnen
 - Begrünung von Dächern/Fassaden
-- Pflanzung von Bäumen
-- 
+- Pflanzung von neuen Bäumen
 
+
+## UserStory
+- Nutzer betritt den Raum mit der IVE und erhält eine Einführung in die Thematik des Projekts und Bedienung des Systems (mit App)
+- Nutzer sucht sich einen Ort und Klimaszenario aus, den er visualisiert haben möchte
+- Aktueller Stand (2024) wird angezeigt
+- Nutzer kann mithilfe der App zum nächsten Zeitpunkt in der Zukunft springen. Hier werden die ersten Folgen sichtbar.
+- Optional kann der Nutzer nun schon erste begerenzte Maßnahmen auswählen
+- Beim Sprung zum nächsten Zeitpunkt werden jeweils mehr Folgen sichtbar und der Nutzer kann jeweils mehr Maßnahmen auswählen
+- Der letzte Zeitpunkt 20100 zeigt die drastischsten Folgen und am meisten wählbare Maßnahmen
+- Zum Ende wird eine Zusammenfassung der Folgen und Maßnahmen sichtbar
+- Dem Nutzer wird die Möglichkeit gegeben das Szenario erneut oder mit einem anderen Klimaszenario durchzuspielen
+- Optional hat der Nutzer die Möglichkeit das andere Szenario auszuwählen
+- Letztendlich wird um Feedback gebeten (Fragebogen)
 
 ## Notes 29.10.2024
 Render an animation with unity. For each chosen spot extend existing city 3D model by textures. For each spot develop some projects as "Prinzipalmarkt 2035". Create animations for each year, some static (new buildings) and some dynamic (color grading) changes. Control animation (year, spot) via controller/website on smarthpone/overlay on IVE.
