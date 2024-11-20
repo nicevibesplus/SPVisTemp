@@ -68,7 +68,7 @@ Szenario:
 - Sobald der Nutzer alle Jahre gesehen hat, kann er frei hin und her wechseln.
 - von 2024 - 2100
 - 2 Orte: Aasee mit viel Vegetation, Straße in der Stadt mit wenig Vegetation (bauliche Maßnahmen sichtbar machen)
-- Temperaturauswahl: Klimadaten vom Geo1: Durchschnitt vom Tageshöchstwert vom 01.-31. Juli 2024 = **23,12 °C** (für August wären es **24,7 °C** )+ Temperaturzunahme nach IPCC über die Jahre
+- Temperaturauswahl: Klimadaten vom Geo1: Durchschnitt vom Tageshöchstwert vom 01.-31. Juli 2024 = **23,12 °C** (für August wären es **24,7 °C** )+ Temperaturzunahme nach IPCC über die Jahre (Überlegung in Sprint Review: Extremen Tag im August statt Durchschnittswert wählen)
 - an die einzelnen Folgen (z.B. toter Baum) sollen Popups platziert werden, in diesen wird der User genauer informiert
 
 Folgen:
@@ -111,11 +111,11 @@ konkrete Maßnahmen:
 - Nutzer kann mithilfe der App zum nächsten Zeitpunkt in der Zukunft springen. Hier werden die ersten Folgen sichtbar.
 - Optional kann der Nutzer nun schon erste begerenzte Maßnahmen auswählen
 - Beim Sprung zum nächsten Zeitpunkt werden jeweils mehr Folgen sichtbar und der Nutzer kann jeweils mehr Maßnahmen auswählen
-- Der letzte Zeitpunkt 20100 zeigt die drastischsten Folgen und am meisten wählbare Maßnahmen
+- Der letzte Zeitpunkt 2100 zeigt die drastischsten Folgen und am meisten wählbare Maßnahmen
 - Zum Ende wird eine Zusammenfassung der Folgen und Maßnahmen sichtbar
 - Dem Nutzer wird die Möglichkeit gegeben das Szenario erneut oder mit einem anderen Klimaszenario durchzuspielen
 - Optional hat der Nutzer die Möglichkeit das andere Szenario auszuwählen
-- Letztendlich wird um Feedback gebeten (Fragebogen)
+- Letztendlich wird um Feedback gebeten (Fragebogen) (Tipp aus Sprint Reviw: Einzelne Zwischenschritte /Klickverhalten dokumentieren, um Rückschlüsse ziehen zu können)
 
 ## Notes 29.10.2024
 Render an animation with unity. For each chosen spot extend existing city 3D model by textures. For each spot develop some projects as "Prinzipalmarkt 2035". Create animations for each year, some static (new buildings) and some dynamic (color grading) changes. Control animation (year, spot) via controller/website on smarthpone/overlay on IVE.
