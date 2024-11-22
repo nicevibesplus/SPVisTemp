@@ -25,12 +25,12 @@ This repository contains the work for the **"Study Project"** module focused on 
 
 ## Klimaszenarien mit Folgen
 
-||°C|Szenario 1|°C|Szenario 2|°C|Szenario 3|
+||°C|Szenario 1 (SSP1-1.9)|°C|Szenario 2 (SSP2-4.5)|°C|Szenario 3 (SSP5-8.5)|
 |---|---|---|---|---|---|---|
-|2040|
-|2060|
-|2080|
-|2100|
+|2040| +1,7°C |    | +1,8°C |    | +1,9°C |    |
+|2060| +2,0°C |    | +2,5°C |    | +3,0°C |    |
+|2080| +2,0°C |    | +3,0°C |    | +4,4°C |    |
+|2100| +1,8°C |    | +3,5°C |    | +5,7°C |    |
 
 ## Ideen für Ort der Visualisierung
 **Prinzipalmarkt** <br> Pro: 
