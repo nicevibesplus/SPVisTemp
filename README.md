@@ -32,6 +32,12 @@ This repository contains the work for the **"Study Project"** module focused on 
 |2080| +2,0°C |    | +3,0°C |    | +4,4°C |    |
 |2100| +1,8°C |    | +3,5°C |    | +5,7°C |    |
 
+## Folgen des Klimawandels gestaffelt nach Temperaturanstieg
+
+||°C| Folgen |
+|---|---|
+|2° | Test|
+
 ## Ideen für Ort der Visualisierung
 **Prinzipalmarkt** <br> Pro: 
 - sofortiges Erkennungsmerkmal für Münster
