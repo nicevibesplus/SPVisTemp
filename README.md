@@ -35,7 +35,7 @@ This repository contains the work for the **"Study Project"** module focused on 
 ## Folgen des Klimawandels gestaffelt nach Temperaturanstieg
 
 |°C| Folgen auf Natur | Anpassungen der Menschen | 
-|---|---|
+|---|---|---|
 | 1°| Rasen trocknet (leicht) aus |  |
 | 2°| Einige Bäume braun |  | 
 | 3°| Einige Bäume lichter und verlieren Blätter| Weniger Menschen <br> Sonnenschirm | 
