@@ -34,9 +34,25 @@ This repository contains the work for the **"Study Project"** module focused on 
 
 ## Folgen des Klimawandels gestaffelt nach Temperaturanstieg
 
-||°C| Folgen |
+|°C| Folgen auf Natur | Anpassungen der Menschen | 
 |---|---|
-|2° | Test|
+| 1°| Rasen trocknet (leicht) aus |  |
+| 2°| Einige Bäume braun |  | 
+| 3°| Einige Bäume lichter und verlieren Blätter| Weniger Menschen <br> Sonnenschirm | 
+| 4°| Bäume sterben (Welche?) <br> Rasen stirbt | Fast keine Menschen |
+| 5°|  | Keine Menschen |
+| 6°| Aasee kippt | |
+
+## Gegenmaßnahmen 
+
+|°C| Maßnahmen |
+|---|---|
+| 0°| Trinkwasserbrunnen |
+| 1°| Parks und Begrünung <br> Grüne Dächer <br> Fassadenbegrünung <br> Sonnensegel |
+| 2°| (Reflektierende Oberflächen) |
+| 3°| Benetzung von Straßen |
+
+
 
 ## Ideen für Ort der Visualisierung
 **Prinzipalmarkt** <br> Pro: 
