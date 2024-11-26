@@ -23,14 +23,14 @@ This repository contains the work for the **"Study Project"** module focused on 
 |   [Heatmap zum Heat Island-Effekt](https://www.stadt-muenster.de/klima/klimaanpassung/tipps/hitze#:~:text=Es%20wird%20w%C3%A4rmer%3A%20Die%20Temperaturen,11%2C6%20%C2%B0C%20prognostiziert)   |    Prognose für Heat island Effekt in Münster im Jahr 2030    |      |  Philip   |
 |     |      |     |     |
 
-## Klimaszenarien mit Folgen
+## Temperaturanstiege zu heute in Münster
 
 ||°C|Szenario 1 (SSP1-1.9)|°C|Szenario 2 (SSP2-4.5)|°C|Szenario 3 (SSP5-8.5)|
 |---|---|---|---|---|---|---|
-|2040| +1,7°C |    | +1,8°C |    | +1,9°C |    |
-|2060| +2,0°C |    | +2,5°C |    | +3,0°C |    |
-|2080| +2,0°C |    | +3,0°C |    | +4,4°C |    |
-|2100| +1,8°C |    | +3,5°C |    | +5,7°C |    |
+|2040| +1,7°C |  25,1°  | +1,8°C |    | +1,9°C |  25,3°  |
+|2060| +2,0°C |  25,4°  | +2,5°C |    | +3,0°C |  26,4°  |
+|2080| +2,0°C |  25,4°  | +3,0°C |    | +4,4°C |  27,8°  |
+|2100| +1,8°C |  25,2°  | +3,5°C |    | +5,7°C |  29,1°  |
 
 ## Folgen des Klimawandels gestaffelt nach Temperaturanstieg
 
