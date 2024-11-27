@@ -62,11 +62,6 @@ Contra:
 - keine Vegetation 
 - schwerige Texturen 
 
-**Schlossplatz** <br> Pro:
-- Vegetation vorhanden
-- Merkmal für Münster
-- vermutlich einfach umsetzbar(?)
-
 Contra: 
 
 **Aaseekugeln** <br> Pro:
@@ -78,9 +73,6 @@ Contra:
 
 Contra:
 - keine Gebäude, um bauliche Maßnahmen zu zeigen
-
-
-...Hier weitere Orte...
 
 ## Ideen für die Storyline 
 
@@ -98,13 +90,11 @@ Folgen:
 2040: 
   - Baum: braune Blätter, sieht kränklich aus
   - gelber Rasen
-  - 
 2060:
   - Baum verliert Blätter
   - weniger Menschen
   - sehr gelber, brauner Rasen
   - Menschen mit Sonnenschirm, Hüten
-  - 
 2080:
   - Baum umgekippt
   - brauner Rasen, Matschwiese
