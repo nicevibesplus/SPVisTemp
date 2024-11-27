@@ -92,6 +92,7 @@ Szenario:
 - 2 Orte: Aasee mit viel Vegetation, Straße in der Stadt mit wenig Vegetation (bauliche Maßnahmen sichtbar machen)
 - Temperaturauswahl: Klimadaten vom Geo1: Durchschnitt vom Tageshöchstwert vom 01.-31. Juli 2024 = **23,12 °C** (für August wären es **24,7 °C** )+ Temperaturzunahme nach IPCC über die Jahre (Überlegung in Sprint Review: Extremen Tag im August statt Durchschnittswert wählen)
 - an die einzelnen Folgen (z.B. toter Baum) sollen Popups platziert werden, in diesen wird der User genauer informiert
+- Tipp aus Treffen 27.11.24: Häufigkeiten der Extremereignisse sollten dargestellt werden (Idee: Kalender mit mehr heissen Tagen; spielerische Darstellung von Auswirkung langer Hitzeperioden)
 
 Folgen:
 2040: 
