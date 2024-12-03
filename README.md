@@ -132,7 +132,7 @@ konkrete Maßnahmen:
 - während des ganzen Prozesses werden Klickentscheidungen getrackt und dokumeniert, um diese Auszuwerten
 
 
-
+### old
 - Nutzer betritt den Raum mit der IVE und erhält eine Einführung in die Thematik des Projekts und Bedienung des Systems (mit App)
 - Nutzer sucht sich einen Ort und Klimaszenario aus, den er visualisiert haben möchte
 - Aktueller Stand (2024) wird angezeigt
