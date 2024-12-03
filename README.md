@@ -118,6 +118,21 @@ konkrete Maßnahmen:
 
 
 ## UserStory
+### 03.12.2024
+- Nutzer betritt den Raum und erhält das Smartphone zur Steuerung der IVE
+- Am Anfang wird auf der IVE ein alles überdeckendes Overlay oder 1sek langes Video eingeblendet mit einem Einleitungstext (Begrüßung, Inhalt der folgenden Darstellung, Anleitung zur Nutzung der App und IVE)
+- Der Nutzer startet per App die erste Simulation (freie Wahl von Ort und Szenario)
+- am linkesten Bildrand wird dauerhaft in einem Overlay aktuelle Informationen angezeigt. (Ort, Szenario, Erklärungen zu den visuellen Änderungen, Erklärungen zu den Einflüssen der Maßnahmen)
+- am mittleren Bildschirm wird dauerhaft ein Thermometer und die Jahreszahl eingeblendet
+- während der Aasee Simulation kann der Nutzer in der App per Klick zum nächsten Zeitpunkt springen
+- während der Prinzipalmarkt Simulation kann der Nutzer in der App per Klick Maßnahmen (Trinkbrunnen, Grünstreifen, Sonnensegel) hinzufügen und/oder zum nächsten Zeitpunkt springen
+- wenn eine Simulation bis 2100 durchgelaufen ist, dann kann der Nutzer in Ruhe alle Informationstexte zu Ende lesen und per App eine neue Simulation starten
+- der Nutzer kann nach jeder Simulation auch den Versuch per Klick beenden, dann wird ein Video/Overlay mit Dankesagung eingeblendet
+- Anschließend wird um Feedback gebeten
+- während des ganzen Prozesses werden Klickentscheidungen getrackt und dokumeniert, um diese Auszuwerten
+
+
+
 - Nutzer betritt den Raum mit der IVE und erhält eine Einführung in die Thematik des Projekts und Bedienung des Systems (mit App)
 - Nutzer sucht sich einen Ort und Klimaszenario aus, den er visualisiert haben möchte
 - Aktueller Stand (2024) wird angezeigt
