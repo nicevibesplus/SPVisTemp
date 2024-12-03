@@ -145,6 +145,12 @@ konkrete Maßnahmen:
 - Optional hat der Nutzer die Möglichkeit das andere Szenario auszuwählen
 - Letztendlich wird um Feedback gebeten (Fragebogen) (Tipp aus Sprint Reviw: Einzelne Zwischenschritte /Klickverhalten dokumentieren, um Rückschlüsse ziehen zu können)
 
+## Fragen an Tillmann Buttschardt
+
+- Werden Bäume (Eichen, Linde…) brauner / vertrocknen, durch zu hohe Temperaturen?
+- Gibt es unterschiedliche Verhaltensweisen von Eichen und Linden..., in Bezug auf Temperaturerhöhung und keinem Niederschlag
+
+
 ## Notes 29.10.2024
 Render an animation with unity. For each chosen spot extend existing city 3D model by textures. For each spot develop some projects as "Prinzipalmarkt 2035". Create animations for each year, some static (new buildings) and some dynamic (color grading) changes. Control animation (year, spot) via controller/website on smarthpone/overlay on IVE.
 - Best Case options: moving animation, multiple spots, many years -> more static changes, better dynamic change
