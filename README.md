@@ -47,7 +47,7 @@ This repository contains the work for the **"Study Project"** module focused on 
 
 |°C| Maßnahmen |
 |---|---|
-| 0°| Trinkwasserbrunnen |
+| 0°| Trinkwasserbrunnen <br> Fontäne |
 | 1°| Parks und Begrünung <br> Grüne Dächer <br> Fassadenbegrünung <br> Sonnensegel |
 | 2°| (Reflektierende Oberflächen) |
 | 3°| Benetzung von Straßen |
