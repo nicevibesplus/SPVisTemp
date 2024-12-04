@@ -149,6 +149,8 @@ konkrete Maßnahmen:
 
 - Werden Bäume (Eichen, Linde…) brauner / vertrocknen, durch zu hohe Temperaturen?
 - Gibt es unterschiedliche Verhaltensweisen von Eichen und Linden..., in Bezug auf Temperaturerhöhung und keinem Niederschlag
+- Was sind die folgen für den Rasen?
+- Wie häufig extreme Hitzetage?
 
 
 ## Notes 29.10.2024
