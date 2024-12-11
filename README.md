@@ -52,6 +52,16 @@ This repository contains the work for the **"Study Project"** module focused on 
 | 2°| (Reflektierende Oberflächen) |
 | 3°| Benetzung von Straßen |
 
+## Maßnahmen Pop-Ups-Texte:
+
+- **Trinkwasserbrunnen:** Ein neuer Trinkwasserbrunnen hilft, die Bevölkerung an heißen Tagen hydriert zu halten. Er senkt zwar nicht die Temperatur, erhöht jedoch das Wohlbefinden.
+- **Fontäne im Aasee:** Eine Fontäne sorgt für bessere Durchmischung des Seewassers und verringert das Risiko von Sauerstoffmangel und des daraus folgenden Fischsterbens. 
+- **Grünstreifen:** Ein Grünstreifen senkt die gefühlte Temperatur um mindestens 1 °C, verbessert die Luftqualität und steigert die Aufenthaltsqualität.
+- **Grüne Dächer:** Grüne Dächer senken die Umgebungstemperatur um mindestens 1 °C, reduzieren die Wärmeaufnahme von Gebäuden und verringern dadurch ihren Kühlbedarf.
+- **Sonnensegel:** Sonnensegel spenden Schatten und können mit Wassersprenklern ausgestattet werden, um die Aufenthaltsqualität deutlich zu steigern. Sie können die gefühlte Temperatur um bis zu 3 °C senken.
+- **Baumsäcke:** Baumsäcke versorgen neu gepflanzte Bäume effektiv mit Wasser und fördern so ihr Wachstum, besonders in Trockenperioden. Gesunde Bäume verbessern die Luftqualität und senken die gefühlte Umgebungstemperatur.
+
+
 ## Infotexte zu Szenarien
 ### Szenario (SSP5-8.5)
 | Jahr | Allgemein | Aasee | Prinzipalmarkt |
