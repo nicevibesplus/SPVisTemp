@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 2000;
 
 let temperature = 20; // Ausgangstemperatur
 
