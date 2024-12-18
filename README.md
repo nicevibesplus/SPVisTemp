@@ -188,6 +188,52 @@ konkrete Maßnahmen:
 - Einflüsse auf örtliche Biodiversität?
 - Wahrscheinlichkeit von Bränden?
 
+## Notizen aus der Stunde mit Prof. Tillmann Buttschardt
+• Platanen sind gut, Palmen vielleicht, Pawlonien??
+• tinyforest mit japanischen Bäume da in der Ecke links 
+• vielleicht Bäume pflanzen, die schnell hochwachsen mit großen Blätter zum Schatten spenden
+
+• Esche kann einzelne Äste „ausschalten“, kann entscheiden jo kommt weg 
+• Eiche und Kastanie nicht, von außen nach innen austrocknend, allgemeinere Form der Austrocknung, das wo Wasser am längsten braucht zuerst weg
+• Baumsäcke bei alten Bäumen nicht sinnvoll, nur bei neugepflanzten
+
+• Aasee Grünflächen mehr bepflanzen, schattiger machen
+• nicht nur Rasen
+• Rasen wird gelb, weil trocken
+
+• Grill- und Rauchverbot am Aasee
+ vielleicht Brandstelle darstellen
+ Schilder Achtung 
+
+• Stadt macht immer rechtzeitig was, und Maßnahmen (kranke Bäume)
+
+• Autoverkehr mehr, weil Leuten da nicht mehr laufen, sondern in klimatisierten Autos
+
+• Eichenprozessionsspinner sind nicht an Temperatur gebunden, sondern kommen in Wellen
+ die befallen schwächere Bäume eher
+ Absperrbänder
+ gesund Bäume  Trockenstress  angefressen, können sich nicht erholen
+
+• Aasee vielleicht etwas weniger Wasser -> das verdunstet
+• Aasee vielleicht etwas andere Farbe -> grün, weil mehr Algen
+
+• Prinzipalmarkt:
+-	Helle Straße wegen Albedo, heller Belag
+-	Grünstreifen
+-	Sprenkleranlagen
+-	Platanen
+-	Dachbegrünung und Fassadenbegrünung nützt nichts, sind dann auch trocken, brauchen Wasser
+-	Wollen wir eine schöne Innenstadt? Oder nur negative Auswirkungen Klimawandel?
+
+• Aasee vielleicht etwas weniger Wasser  das verdunstet
+• Aasee vielleicht etwas andere Farbe  grün, weil mehr Algen
+
+• Anschauen, wie es wirklich in den Hitzejahren in der Natur aussah
+
+• vielleicht auch zusätzliche Umfrage vorher zum Vergleich 
+
+
+
 ## Notes 29.10.2024
 Render an animation with unity. For each chosen spot extend existing city 3D model by textures. For each spot develop some projects as "Prinzipalmarkt 2035". Create animations for each year, some static (new buildings) and some dynamic (color grading) changes. Control animation (year, spot) via controller/website on smarthpone/overlay on IVE.
 - Best Case options: moving animation, multiple spots, many years -> more static changes, better dynamic change
