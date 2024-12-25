@@ -14,7 +14,6 @@ async function updateTemperatureDisplay() {
         const fillPercentage = ((currentTemperature - minTemp) / (maxTemp - minTemp)) * 100;
         temperatureElement.style.height = fillPercentage + '%';
         temperatureElement.dataset.value = currentTemperature + '°C'; // Anzeige der Temperatur im Balken
-
     } catch (error) {
         console.error('Error fetching temperature:', error);
     }

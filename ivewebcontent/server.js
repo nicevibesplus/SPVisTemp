@@ -3,6 +3,16 @@ const app = express();
 const port = 2000;
 
 let temperature = 20; // Ausgangstemperatur
+let calendar = { date: new Date(), frequency: 0, heatDays: [] }; // Ausgangswert für Hitzetage im Monat
+
+const generateRandomIntegers = (amount, min, max) => {
+  const randomIntegers = [];
+  for (let i = 0; i < amount; i++) {
+    const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+    randomIntegers.push(randomNum);
+  }
+  return randomIntegers;
+}
 
 // API-Endpunkt, um die Temperatur abzurufen
 app.get('/api/temperature', (req, res) => {
@@ -19,6 +29,27 @@ app.post('/api/temperature', (req, res) => {
     res.status(400).json({ success: false, message: "Invalid temperature value" });
   }
 });
+
+app.get('/api/calendar', (req, res) => {
+  res.json(calendar);
+});
+
+app.post('/api/calendar', (req, res) => {
+  const newDate = req.query.date || null;
+  const newFrequency = req.query.frequency || null;
+  try {
+    if (newDate) {
+      calendar.date = newDate
+    }
+    if (newFrequency) {
+      calendar.frequency = newFrequency
+      calendar.heatDays = generateRandomIntegers(calendar.frequency, 1, 31)
+    }
+    res.json({ success: true, calendar })
+  } catch (error) {
+    res.status(400).json(error);
+  }
+})
 
 // Statische Dateien bereitstellen
 app.use(express.static('public'));

@@ -1,7 +1,11 @@
 ### get temp
-GET http://localhost:3000/api/temperature
+GET http://localhost:2000/api/temperature
 Content-Type: application/json
 
 ### 
-POST http://localhost:3000/api/temperature?value=28
+POST http://localhost:2000/api/temperature?value=28
+Content-Type: application/json
+
+###
+POST http://localhost:2000/api/calendar?date=2040-08-01&frequency=10
 Content-Type: application/json
