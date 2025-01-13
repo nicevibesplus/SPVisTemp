@@ -253,9 +253,9 @@ Rosskastanie (Healthy) |1779| x | | | | x|
 Eiche (Healthy) |1778|  | | | |  |
 Eiche (Less Healthy) |1789| |  |  |  |  |
 couple |1812| x | | | | x |
-group_floor |1772| x | x | | | x|
+group_floor |1772| x | x | x | | x|
 group_wide |1813| x | x | | | x |
-person_back |1811| x | x | | | x |
+person_back |1811| x | x | x | | x |
 person_running |1807| x | x | | | x |
 
 
