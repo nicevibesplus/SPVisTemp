@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
+app.use(express.json())
 const port = 2000;
 
 let temperature = 20; // Ausgangstemperatur
 let calendar = { date: new Date(), frequency: 0, heatDays: [] }; // Ausgangswert für Hitzetage im Monat
+let infotext = "empty infotext";
 
 const generateRandomIntegers = (amount, min, max) => {
   const randomIntegers = [];
@@ -46,6 +48,24 @@ app.post('/api/calendar', (req, res) => {
       calendar.heatDays = generateRandomIntegers(calendar.frequency, 1, 31)
     }
     res.json({ success: true, calendar })
+  } catch (error) {
+    res.status(400).json(error);
+  }
+})
+
+app.get('/api/infotext', (req, res) => {
+  res.json({infotext});
+})
+
+app.post('/api/infotext', (req, res) => {
+  const newInfotext = req.body.infotext || null;
+  console.log(req.body)
+  console.log(newInfotext)
+  try {
+    if (newInfotext) {
+      infotext = newInfotext
+    }
+    res.json({ success: true, infotext })
   } catch (error) {
     res.status(400).json(error);
   }

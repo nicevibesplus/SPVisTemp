@@ -3,9 +3,19 @@ GET http://localhost:2000/api/temperature
 Content-Type: application/json
 
 ### 
-POST http://localhost:2000/api/temperature?value=28
+POST http://localhost:2000/api/temperature?value=27
 Content-Type: application/json
 
 ###
-POST http://localhost:2000/api/calendar?date=2040-08-01&frequency=10
+POST http://localhost:2000/api/calendar?date=2080-08-01&frequency=20
 Content-Type: application/json
+
+###
+POST http://localhost:2000/api/infotext
+Content-Type: application/json
+
+{
+    "infotext":"<h2>SSP5-8.5</h2><p>Das Szenario SSP5-8.5 modelliert die globale Klimaerwärmung, mit der Annahme, dass keine ausreichenden Maßnahmen zur Eindämmung des Klimawandels und zur Beschränkung des Temperaturanstiegs auf 1,5°C getroffen werden und die globalen CO₂-Emissionen bis 2100 weiter ansteigen.</p>"
+}
+
+###
