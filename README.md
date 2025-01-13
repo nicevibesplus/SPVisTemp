@@ -238,20 +238,20 @@ für schlimmsten
 | Asset | 2040 | 2060 | 2080 | 2100 | Aasee | Prinzipalmarkt | Besonderheiten |
 |----|------|---| ---| ---| ---| -------|-------|
 Grünstreifen | || x | x | | x | nicht gleichzeitig mit Sonnensegel | 
-Castanea Healthy | x | | | | x | 
-Castanea Unhealthy | | | x| x | x |
+Castanea Healthy | x | | | |  | 
+Castanea Unhealthy | | x | | | |
 Grillverbot_Schild | x | x | x | x | x | 
 Oak Healthy | x | | | | x |
-Oak Unhealthy v2 | | x | x | x | x |
-Oak Unhealthy v3 | | x | | | x |
+Oak Unhealthy v2 | |  |  |  |  |
+Oak Unhealthy v3 | | x |  | |  |
 Sonnensegel | x | x ||||x | nicht gleichzeitig mit Sonnensegel
 Trinkbrunnen | x | x | x | x | x | x |  
 Wasser Hinweis Schild | x | x | x | x | x | x |
 fireban sign 1 | | | x | x | x |
 fireban sign 2 | | | x | x | x|
 Rosskastanie (Healthy) | x | | | | x|
-Eiche (Healthy) | x | | | | x |
-Eiche (Less Healthy) | | x | x | x | x |
+Eiche (Healthy) |  | | | |  |
+Eiche (Less Healthy) | |  |  |  |  |
 couple | x | | | | x |
 group_floor | x | x | | | x|
 group_wide | x | x | | | x |
