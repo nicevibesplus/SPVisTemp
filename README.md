@@ -238,12 +238,12 @@ für schlimmsten
 | Asset | 2040 | 2060 | 2080 | 2100 | Aasee | Prinzipalmarkt | Besonderheiten |
 |----|------|---| ---| ---| ---| -------|-------|
 Grünstreifen | || x | x | | x | nicht gleichzeitig mit Sonnensegel | 
-Castanea Healthy | x | | | |  | 
-Castanea Unhealthy | | x | | | |
+Castanea Healthy | x | | |  | x | 
+Castanea Unhealthy | | x | |  | x |
 Grillverbot_Schild | x | x | x | x | x | 
 Oak Healthy | x | | | | x |
 Oak Unhealthy v2 | |  |  |  |  |
-Oak Unhealthy v3 | | x |  | |  |
+Oak Unhealthy v3 | | x |  | | x |
 Sonnensegel | x | x ||||x | nicht gleichzeitig mit Sonnensegel
 Trinkbrunnen | x | x | x | x | x | x |  
 Wasser Hinweis Schild | x | x | x | x | x | x |
