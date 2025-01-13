@@ -7,8 +7,7 @@ let temperature = 20; // Ausgangstemperatur
 let calendar = { date: new Date(), frequency: 0, heatDays: [] }; // Ausgangswert für Hitzetage im Monat
 let infotext = "empty infotext";
 
-const generateRandomIntegers = (amount, min, max) => {
-  const randomIntegers = [];
+const generateRandomIntegers = (amount, min, max, randomIntegers = []) => {
   for (let i = 0; i < amount; i++) {
     const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
     randomIntegers.push(randomNum);
@@ -54,7 +53,7 @@ app.post('/api/calendar', (req, res) => {
 })
 
 app.get('/api/infotext', (req, res) => {
-  res.json({infotext});
+  res.json({ infotext });
 })
 
 app.post('/api/infotext', (req, res) => {

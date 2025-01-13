@@ -7,15 +7,15 @@ POST http://localhost:2000/api/temperature?value=27
 Content-Type: application/json
 
 ###
-POST http://localhost:2000/api/calendar?date=2080-08-01&frequency=20
+POST http://localhost:2000/api/calendar?date=2060-08-01&frequency=10
 Content-Type: application/json
 
 ###
-POST http://localhost:2000/api/infotext
+POST http://giv-sitcomdev.uni-muenster.de:2000/api/infotext
 Content-Type: application/json
 
 {
-    "infotext":"<h2>SSP5-8.5</h2><p>Das Szenario SSP5-8.5 modelliert die globale Klimaerwärmung, mit der Annahme, dass keine ausreichenden Maßnahmen zur Eindämmung des Klimawandels und zur Beschränkung des Temperaturanstiegs auf 1,5°C getroffen werden und die globalen CO₂-Emissionen bis 2100 weiter ansteigen.</p>"
+    "infotext":"<h2>SSP5-8.5</h2><p>Bis zum Jahr 2100 wird erneut mit einem Temperaturanstieg von 1,3gradC gerechnet. Die Geschwindigkeit der Erwärmung ist zwar nicht weiter gestiegen, aber immer noch sehr hoch. Mit den herrschenden Temperaturen ist das Klima vergleichbar mit dem heutigen Klima von Barcelona. Nach diesem Modell herrscht im August 2100, für die maximalen Temperaturwerte, eine Durchschnittstemperatur von 29,2gradC. Dabei sind durchschnittlich 10 Tage des Monats offiziell Hitzetage und im Durchschnitt wird auch kein Tag einen Maximalwert unter 25gradC erreichen. Dies bedeutet weitere Belastung für alle heimischen Pflanzen, somit beginnen empfindlichere Bäume komplett abzusterben. Für robustere Baumarten, die den Temperaturen noch standhalten, steigt weiterhin das Risiko auf Schädlingsbefall oder Erkrankungen. Somit würde der Aasee den Menschen immer weniger Zuflucht vor der städtischen Hitze bieten. Auch seine Funktion als Frischluftschneise verliere an Wirkung und könnte womöglich sogar zu einem Problem werden. Es könnte passieren, dass über den Tag, im See gespeicherte latente Wärme über Nacht in die Stadt geleitet wird.</p>"
 }
 
 ###

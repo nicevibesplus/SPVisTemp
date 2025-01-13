@@ -48,12 +48,14 @@ const updateVisuals = (heatDays, datum) => {
 
     // Get the first day of the month
     let dayone = new Date(year, month, 1).getDay() - 1;
+    if (dayone == -1) dayone = 6
 
     // Get the last date of the month
     let lastdate = new Date(year, month + 1, 0).getDate();
 
     // Get the day of the last date of the month
     let dayend = new Date(year, month, lastdate).getDay() - 1;
+    if (dayend == -1) dayend = 6
 
     // Get the last date of the previous month
     let monthlastdate = new Date(year, month, 0).getDate();
@@ -72,7 +74,7 @@ const updateVisuals = (heatDays, datum) => {
 
         // Check if the current date is today
         if (heatDays.includes(i)) {
-            lit += `<li style="background: red;">${i}</li>`
+            lit += `<li style="color: red; font-weight: bold;">${i}</li>`
         } else {
             lit += `<li>${i}</li>`;
         }
