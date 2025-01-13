@@ -39,7 +39,7 @@ fun AppNavigator() {
         )
         Screen.Second -> SecondScreen(
             networkService = networkService,
-            onNavigate = { currentScreen = Screen.Third }
+            onNavigate = { currentScreen = Screen.Fourth }
         )
         Screen.Third -> ThirdScreen(
             networkService = networkService,

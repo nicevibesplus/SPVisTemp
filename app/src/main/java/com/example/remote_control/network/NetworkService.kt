@@ -161,6 +161,60 @@ class NetworkService {
         })
     }
 
+    fun postCalendar(year: Int, frequency: Int) {
+        val date = "${year + 20}-08-01"
+        val url = "http://giv-sitcomdev.uni-muenster.de:2000/api/calendar?date=$date&frequency=$frequency"
+        val request = Request.Builder()
+            .url(url)
+            .post(RequestBody.create(null, ByteArray(0))) // Empty POST body
+            .build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                Log.e("CalendarPost", "Failed to post calendar: ${e.message}")
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                if (!response.isSuccessful) {
+                    Log.e("CalendarPost", "API call unsuccessful: ${response.code}")
+                } else {
+                    Log.d("CalendarPost", "Calendar posted successfully for date: $date, frequency: $frequency")
+                }
+            }
+        })
+    }
+
+
+
+    fun postInfoText(infotext: String) {
+        val url = "http://giv-sitcomdev.uni-muenster.de:2000/api/infotext"
+        val jsonBody = """
+        {
+            "infotext": "$infotext"
+        }
+    """.trimIndent()
+
+        val request = Request.Builder()
+            .url(url)
+            .post(RequestBody.create("application/json".toMediaTypeOrNull(), jsonBody))
+            .build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                Log.e("InfoTextPost", "Failed to post infotext: ${e.message}")
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                if (!response.isSuccessful) {
+                    Log.e("InfoTextPost", "API call unsuccessful: ${response.code}")
+                } else {
+                    Log.d("InfoTextPost", "Infotext posted successfully: $infotext")
+                }
+            }
+        })
+    }
+
+
 
 
 

@@ -69,6 +69,9 @@ fun ThirdScreen(
                         // Step 1: Select the location via API call
                         val locationId = if (selectedLocation == "Aasee") 1768 else 1790
                         networkService.emitToggleOverlay(1784, display = true, type = "website")
+                        networkService.emitToggleOverlay(1775, display = true, type = "website")
+                        networkService.emitToggleOverlay(1776, display = true, type = "website")
+
                         networkService.setLocation(locationId, "outdoor", selectedLocation)
                         withContext(Dispatchers.Main) {
                             Toast.makeText(context, "Location set: $selectedLocation", Toast.LENGTH_SHORT).show()
@@ -98,6 +101,9 @@ fun ThirdScreen(
 
                             // Set initial temperature
                             networkService.postTemperature(23.4)
+                            networkService.postCalendar(2000, 5)
+                            networkService.postInfoText(yearDetail.text)
+
 
                             withContext(Dispatchers.Main) {
                                 Toast.makeText(context, "Overlays toggled on for $selectedLocation ($selectedQuality, 2020)", Toast.LENGTH_SHORT).show()

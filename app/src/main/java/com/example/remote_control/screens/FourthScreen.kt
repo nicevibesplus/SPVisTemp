@@ -16,6 +16,8 @@ import kotlinx.coroutines.*
 
 
 
+import android.util.Log
+
 @Composable
 fun FourthScreen(
     networkService: NetworkService,
@@ -32,138 +34,223 @@ fun FourthScreen(
     var currentTemperature by remember { mutableStateOf(23.4) }
 
     // Measure-specific state
-    val measure = DataProvider.locationSpecificMeasures[selectedLocation]?.firstOrNull()
-    var isMeasureButtonEnabled by remember { mutableStateOf(false) }
-    var isMeasureActivated by remember { mutableStateOf(false) } // New flag for permanent disable
+    val measures = DataProvider.locationSpecificMeasures[selectedLocation] ?: emptyList()
 
-    // Excluded Overlay IDs
-    val excludedOverlayIds = remember { mutableStateListOf(1784) }
+    // Track excluded overlay IDs
+    val excludedOverlayIds = remember { mutableStateListOf(1784, 1775, 1776) }
+
+    // Track active info overlays
+    val activeInfoOverlays = remember { mutableStateListOf<Int>() }
+
+    // Track activation states for measures
+    val measureActivationStates = remember {
+        mutableStateMapOf<Int, Boolean>().apply {
+            measures.forEach { measure ->
+                this[measure.id] = false // Initialize all measures as not activated
+            }
+        }
+    }
+
+    // Current year
+    val currentYear = years.getOrElse(currentYearIndex) { 0 }
+
+    // Function to handle temperature-based overlays
+    fun manageWarningOverlays() {
+        CoroutineScope(Dispatchers.IO).launch {
+            // Define the relevant overlays
+            val relevantOverlays = setOf(1774, 1777, 1785)
+
+            // Determine which overlays should be active based on the temperature
+            val overlaysToToggle = mutableSetOf<Int>()
+            if (currentTemperature > 28) {
+                overlaysToToggle.addAll(relevantOverlays)
+            } else if (currentTemperature > 27) {
+                overlaysToToggle.addAll(listOf(1774, 1777))
+            } else if (currentTemperature > 26) {
+                overlaysToToggle.add(1774)
+            }
+
+            // Isolate changes to relevant overlays
+            val currentRelevantExclusions = excludedOverlayIds.filter { it in relevantOverlays }.toSet()
+            val overlaysToTurnOn = overlaysToToggle - currentRelevantExclusions
+            val overlaysToTurnOff = currentRelevantExclusions - overlaysToToggle
+
+            // Toggle relevant overlays on
+            overlaysToTurnOn.forEach { overlayId ->
+                networkService.emitToggleOverlay(overlayId, display = true, type = "overlay")
+                excludedOverlayIds.add(overlayId) // Add to exclusions
+            }
+
+            // Toggle relevant overlays off
+            overlaysToTurnOff.forEach { overlayId ->
+                networkService.emitToggleOverlay(overlayId, display = false, type = "overlay")
+                excludedOverlayIds.remove(overlayId) // Remove from exclusions
+            }
+        }
+    }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        verticalArrangement = Arrangement.SpaceBetween
     ) {
-        // Display Current Temperature
-        Text("Current Temperature: ${"%.1f".format(currentTemperature)} °C", style = MaterialTheme.typography.titleLarge)
-        Spacer(modifier = Modifier.height(16.dp))
+        // Top Section: Temperature Display and Measure Buttons
+        Column(
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            // Display Current Temperature
+            Text(
+                "Current Temperature: ${"%.1f".format(currentTemperature)} °C",
+                style = MaterialTheme.typography.titleLarge
+            )
+            Spacer(modifier = Modifier.height(16.dp))
 
-        Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-            // "Next" Button
-            Button(onClick = {
-                CoroutineScope(Dispatchers.IO).launch {
-                    try {
-                        // Step 1: Toggle off all overlays except excluded IDs
-                        val videoId = if (selectedLocation == "Aasee") 1787 else 1766
-                        toggleAllOverlays(context, networkService, videoId, excludedOverlayIds = excludedOverlayIds.toSet())
-                        delay(1000)
-
-                        // Step 2: Fetch and toggle on overlays for the current year
-                        val currentYear = years[currentYearIndex]
-                        val yearDetail = DataProvider.locationData[selectedLocation]?.get(selectedQuality)?.temperatures?.get(currentYear)
-
-                        if (yearDetail != null) {
-                            // Update the current temperature
-                            currentTemperature += yearDetail.temp // Add the tempChange
-                            networkService.postTemperature(currentTemperature) // Post updated temperature
-
-                            // Toggle on picture overlays
-                            yearDetail.overlays.pictures.forEach { overlayId ->
-                                networkService.emitToggleOverlay(overlayId, display = true, type = "picture")
-                            }
-
-                            // Toggle on website overlays
-                            yearDetail.overlays.websites.forEach { overlayId ->
-                                networkService.emitToggleOverlay(overlayId, display = true, type = "website")
-                            }
-                        } else {
-                            withContext(Dispatchers.Main) {
-                                Toast.makeText(
-                                    context,
-                                    "No overlay data available for $selectedLocation ($selectedQuality) in $currentYear",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
-                        }
-
-                        // Step 3: Enable Measure Button if Condition is Met
-                        if (measure != null && years[currentYearIndex] >= measure.startYear && !isMeasureActivated) {
-                            isMeasureButtonEnabled = true
-                        }
-
-                        // Progress to the next year
-                        if (currentYearIndex < years.size - 1) {
-                            currentYearIndex++
-                        } else {
-                            buttonEnabled = false // Disable the button after the last year
-                        }
-                    } catch (e: Exception) {
-                        withContext(Dispatchers.Main) {
-                            Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                }
-            }, enabled = buttonEnabled) {
-                Text("Next")
-            }
-
-            // Measure Button
-            Button(
-                onClick = {
-                    measure?.let {
+            // Create a button for each measure
+            measures.forEach { measure ->
+                Button(
+                    onClick = {
                         CoroutineScope(Dispatchers.IO).launch {
-                            networkService.emitToggleOverlay(it.id, display = true, type = "measure")
+                            networkService.emitToggleOverlay(measure.id, display = true, type = "measure")
+                            networkService.emitToggleOverlay(measure.info, display = true, type = "info") // Toggle on info overlay
+                            activeInfoOverlays.add(measure.info) // Track the active info overlay
+
                             withContext(Dispatchers.Main) {
                                 // Update the current temperature (reduce by tempChange)
-                                currentTemperature -= it.tempChange
+                                currentTemperature -= measure.tempChange
                                 networkService.postTemperature(currentTemperature) // Post updated temperature
 
-                                isMeasureButtonEnabled = false // Disable the button after clicking
-                                isMeasureActivated = true // Permanently disable after activation
-                                excludedOverlayIds.add(it.id) // Add measure ID to excluded overlays
-                                Toast.makeText(context, "Measure ${it.name} toggled ON", Toast.LENGTH_SHORT).show()
+                                measureActivationStates[measure.id] = true // Mark this measure as activated
+                                excludedOverlayIds.add(measure.id) // Add measure ID to excluded overlays
+                                manageWarningOverlays() // Update temperature-based overlays
+                                Toast.makeText(context, "Measure ${measure.name} toggled ON", Toast.LENGTH_SHORT).show()
                             }
                         }
-                    }
-                },
-                enabled = isMeasureButtonEnabled
-            ) {
-                Text(measure?.name ?: "No Measure")
+                    },
+                    enabled = !measureActivationStates[measure.id]!! && currentYear - 20 >= measure.startYear // Respect startYear
+                ) {
+                    Text(measure.name)
+                }
+
+                Spacer(modifier = Modifier.height(8.dp))
             }
         }
 
-        if (!buttonEnabled) {
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(onClick = {
-                CoroutineScope(Dispatchers.IO).launch {
-                    try {
-                        // Determine the video ID based on the selected location
-                        val videoId = if (selectedLocation == "Aasee") 1787 else 1766
+        // Bottom Section: Next and Back Buttons
+        Column(
+            verticalArrangement = Arrangement.Bottom,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            if (buttonEnabled) {
+                // "Next" Button
+                Button(onClick = {
+                    CoroutineScope(Dispatchers.IO).launch {
+                        try {
+                            // Step 1: Toggle off all overlays except excluded IDs
+                            val videoId = if (selectedLocation == "Aasee") 1787 else 1766
 
-                        // Step 1: Toggle off all overlays
-                        toggleAllOverlays(context, networkService, videoId)
-                        delay(1000)
+                            // Toggle off active info overlays
+                            activeInfoOverlays.forEach { infoId ->
+                                networkService.emitToggleOverlay(infoId, display = false, type = "info")
+                            }
+                            activeInfoOverlays.clear() // Clear the list after toggling off
 
-                        // Step 2: Toggle on overlay 1791
-                        networkService.emitToggleOverlay(1791, display = true, type = "picture")
+                            toggleAllOverlays(
+                                context,
+                                networkService,
+                                videoId,
+                                excludedOverlayIds = excludedOverlayIds.toSet()
+                            )
+                            delay(1000)
 
-                        // Navigate back to the third screen
-                        withContext(Dispatchers.Main) {
-                            Toast.makeText(context, "Navigating back to the third screen", Toast.LENGTH_SHORT).show()
-                            onBackToThird()
-                        }
-                    } catch (e: Exception) {
-                        withContext(Dispatchers.Main) {
-                            Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                            // Step 2: Fetch and toggle on overlays for the current year
+                            val yearDetail = DataProvider.locationData[selectedLocation]?.get(selectedQuality)?.temperatures?.get(currentYear)
+
+                            if (yearDetail != null) {
+                                // Update the current temperature
+                                currentTemperature += yearDetail.temp // Add the tempChange
+                                networkService.postTemperature(currentTemperature) // Post updated temperature
+
+                                // Manage temperature-based overlays
+                                manageWarningOverlays()
+
+                                // Post calendar API
+                                val frequency = calculateFrequency(currentTemperature)
+                                networkService.postCalendar(currentYear - 20, frequency)
+
+                                // Post infotext API
+                                networkService.postInfoText(yearDetail.text)
+
+                                // Toggle on picture overlays
+                                yearDetail.overlays.pictures.forEach { overlayId ->
+                                    networkService.emitToggleOverlay(overlayId, display = true, type = "picture")
+                                }
+
+                                // Toggle on website overlays
+                                yearDetail.overlays.websites.forEach { overlayId ->
+                                    networkService.emitToggleOverlay(overlayId, display = true, type = "website")
+                                }
+                            } else {
+                                withContext(Dispatchers.Main) {
+                                    Toast.makeText(
+                                        context,
+                                        "No overlay data available for $selectedLocation ($selectedQuality) in $currentYear",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            }
+
+                            // Progress to the next year
+                            if (currentYearIndex < years.size - 1) {
+                                currentYearIndex++
+                            } else {
+                                buttonEnabled = false // Disable the button after the last year
+                            }
+                        } catch (e: Exception) {
+                            withContext(Dispatchers.Main) {
+                                Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                            }
                         }
                     }
+                }, enabled = buttonEnabled) {
+                    Text("Next")
                 }
-            }) {
-                Text("Back to Third Page")
+            } else {
+                // "Back to Third Page" Button
+                Button(onClick = {
+                    CoroutineScope(Dispatchers.IO).launch {
+                        try {
+                            // Determine the video ID based on the selected location
+                            val videoId = if (selectedLocation == "Aasee") 1787 else 1766
+
+                            // Step 1: Toggle off all overlays
+                            toggleAllOverlays(context, networkService, videoId)
+                            delay(1000)
+
+                            // Step 2: Toggle on overlay 1791
+                            networkService.emitToggleOverlay(1791, display = true, type = "picture")
+
+                            // Navigate back to the third screen
+                            withContext(Dispatchers.Main) {
+                                Toast.makeText(context, "Navigating back to the third screen", Toast.LENGTH_SHORT).show()
+                                onBackToThird()
+                            }
+                        } catch (e: Exception) {
+                            withContext(Dispatchers.Main) {
+                                Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                }) {
+                    Text("Back to Third Page")
+                }
             }
         }
     }
 }
 
+
+fun calculateFrequency(temperature: Double): Int {
+    return ((temperature * 10 / 6) - 34).toInt()
+}
