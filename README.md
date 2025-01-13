@@ -244,9 +244,9 @@ Grillverbot_Schild | x | x | x | x | x |
 Oak Healthy | x | | | | x |
 Oak Unhealthy v2 | | x | x | x | x |
 Oak Unhealthy v3 | | x | | | x |
-Sonnensegel | x | x ||||x |
+Sonnensegel | x | x ||||x | nicht gleichzeitig mit Sonnensegel
 Trinkbrunnen | x | x | x | x | x | x |  
-Wasser Hinweis Schild | x | x | x | x | x |
+Wasser Hinweis Schild | x | x | x | x | x | x |
 fireban sign 1 | | | x | x | x |
 fireban sign 2 | | | x | x | x|
 Rosskastanie (Healthy) | x | | | | x|
