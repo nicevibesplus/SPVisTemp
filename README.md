@@ -232,6 +232,33 @@ konkrete Maßnahmen:
 
 • vielleicht auch zusätzliche Umfrage vorher zum Vergleich 
 
+## Overlays
+
+für schlimmsten
+| Asset | 2040 | 2060 | 2080 | 2100 | Aasee | Prinzipalmarkt | Besonderheiten |
+|----|------|---| ---| ---| ---| -------|-------|
+Grünstreifen | || x | x | | x | nicht gleichzeitig mit Sonnensegel | 
+Castanea Healthy | x | | | | x | 
+Castanea Unhealthy | | | x| x | x |
+Grillverbot_Schild | x | x | x | x | x | 
+Oak Healthy | x | | | | x |
+Oak Unhealthy v2 | | x | x | x | x |
+Oak Unhealthy v3 | | x | | | x |
+Sonnensegel | x | x ||||x |
+Trinkbrunnen | x | x | x | x | x | x |  
+Wasser Hinweis Schild | x | x | x | x | x |
+fireban sign 1 | | | x | x | x |
+fireban sign 2 | | | x | x | x|
+Rosskastanie (Healthy) | x | | | | x|
+Eiche (Healthy) | x | | | | x |
+Eiche (Less Healthy) | | x | x | x | x |
+couple | x | | | | x |
+group_floor | x | x | | | x|
+group_wide | x | x | | | x |
+person_back | x | x | | | x |
+person_running | x | x | | | x |
+
+
 
 
 ## Notes 29.10.2024
