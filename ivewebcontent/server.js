@@ -52,6 +52,24 @@ app.post('/api/calendar', (req, res) => {
   }
 })
 
+app.get('/api/summary', (req, res) => {
+  res.json({ summary });
+})
+
+app.post('/api/summary', (req, res) => {
+  const newSummary = req.body.summary || null;
+  console.log(req.body)
+  console.log(newSummary)
+  try {
+    if (newSummary) {
+      summary = newSummary
+    }
+    res.json({ success: true, summary })
+  } catch (error) {
+    res.status(400).json(error);
+  }
+})
+
 app.get('/api/infotext', (req, res) => {
   res.json({ infotext });
 })
