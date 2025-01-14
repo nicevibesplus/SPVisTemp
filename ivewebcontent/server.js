@@ -6,6 +6,7 @@ const port = 2000;
 let temperature = 20; // Ausgangstemperatur
 let calendar = { date: new Date(), frequency: 0, heatDays: [] }; // Ausgangswert für Hitzetage im Monat
 let infotext = "empty infotext";
+let summary = "empty summary";
 
 const generateRandomIntegers = (amount, min, max, randomIntegers = []) => {
   for (let i = 0; i < amount; i++) {
