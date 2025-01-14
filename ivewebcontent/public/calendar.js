@@ -74,7 +74,7 @@ const updateVisuals = (heatDays, datum) => {
 
         // Check if the current date is today
         if (heatDays.includes(i)) {
-            lit += `<li style="color: red; font-weight: bold;">${i}</li>`
+            lit += `<li class="heat">${i}</li>`
         } else {
             lit += `<li>${i}</li>`;
         }
