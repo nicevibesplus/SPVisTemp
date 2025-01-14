@@ -55,8 +55,8 @@ object DataProvider {
             Measure(id = 1815, name = "Trinkbrunnen", startYear = 2040, tempChange = 0.0, info = 1781),
         ),
         "Prinzipalmarkt" to listOf(
-            Measure(id = 1761, name = "Gruenstreifen", startYear = 2080, tempChange = 2.0, info = 1795),
-            Measure(id = 1817, name = "Sonnensegel", startYear = 2040, tempChange = 1.0, info = 1794),
+            Measure(id = 1761, name = "Gruenstreifen", startYear = 2080, tempChange = 2.0, info = 1795, upgrades = listOf()),
+            Measure(id = 1817, name = "Sonnensegel", startYear = 2040, tempChange = 1.0, info = 1794, upgrades = listOf(1761)),
             Measure(id = 1815, name = "Trinkbrunnen", startYear = 2040, tempChange = 0.0, info = 1781),
         )
     )
@@ -84,5 +84,6 @@ data class Measure(
     val startYear: Int,
     val tempChange: Double,
     val info: Int,
+    val upgrades: List<Int> = emptyList() // List of measure IDs this measure upgrades to or replaces
 )
 

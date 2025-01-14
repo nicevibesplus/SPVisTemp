@@ -29,6 +29,7 @@ fun FourthScreen(
     var currentYearIndex by remember { mutableStateOf(0) }
     val years = listOf(2040, 2060, 2080, 2100)
     var buttonEnabled by remember { mutableStateOf(true) }
+    var showSummaryButton by remember { mutableStateOf(false) } // Tracks summary button visibility
 
     // Current temperature (starting value: 23.4)
     var currentTemperature by remember { mutableStateOf(23.4) }
@@ -42,6 +43,9 @@ fun FourthScreen(
     // Track active info overlays
     val activeInfoOverlays = remember { mutableStateListOf<Int>() }
 
+    // Track logs for activated measures
+    val logs = remember { mutableStateListOf<String>() }
+
     // Track activation states for measures
     val measureActivationStates = remember {
         mutableStateMapOf<Int, Boolean>().apply {
@@ -54,10 +58,10 @@ fun FourthScreen(
     // Current year
     val currentYear = years.getOrElse(currentYearIndex) { 0 }
 
-    // Function to handle temperature-based overlays
+    // Function to handle warnings
     fun manageWarningOverlays() {
         CoroutineScope(Dispatchers.IO).launch {
-            // Define the relevant overlays
+            // Warning overlay ids
             val relevantOverlays = setOf(1774, 1777, 1785)
 
             // Determine which overlays should be active based on the temperature
@@ -109,12 +113,18 @@ fun FourthScreen(
 
             // Create a button for each measure
             measures.forEach { measure ->
+                val higherLevelActive = measures.any { higherMeasure ->
+                    higherMeasure.id in measure.upgrades && measureActivationStates[higherMeasure.id] == true
+                }
+
                 Button(
                     onClick = {
                         CoroutineScope(Dispatchers.IO).launch {
+                            // Activate the current measure
                             networkService.emitToggleOverlay(measure.id, display = true, type = "measure")
                             networkService.emitToggleOverlay(measure.info, display = true, type = "info") // Toggle on info overlay
                             activeInfoOverlays.add(measure.info) // Track the active info overlay
+                            logs.add("Measure ${measure.name} activated in year ${years[currentYearIndex]-20}") // Log activation
 
                             withContext(Dispatchers.Main) {
                                 // Update the current temperature (reduce by tempChange)
@@ -123,18 +133,33 @@ fun FourthScreen(
 
                                 measureActivationStates[measure.id] = true // Mark this measure as activated
                                 excludedOverlayIds.add(measure.id) // Add measure ID to excluded overlays
+
+                                // Deactivate lower-level measures
+                                measures.filter { lowerMeasure ->
+                                    measure.id in lowerMeasure.upgrades && measureActivationStates[lowerMeasure.id] == true
+                                }.forEach { lowerMeasure ->
+                                    measureActivationStates[lowerMeasure.id] = false
+                                    networkService.emitToggleOverlay(lowerMeasure.id, display = false, type = "measure")
+
+                                    // Adjust temperature for deactivated lower-level measure
+                                    currentTemperature += lowerMeasure.tempChange
+                                    networkService.postTemperature(currentTemperature)
+                                }
+
                                 manageWarningOverlays() // Update temperature-based overlays
                                 Toast.makeText(context, "Measure ${measure.name} toggled ON", Toast.LENGTH_SHORT).show()
                             }
                         }
                     },
-                    enabled = !measureActivationStates[measure.id]!! && currentYear - 20 >= measure.startYear // Respect startYear
+                    enabled = !higherLevelActive && !measureActivationStates[measure.id]!! && currentYear - 20 >= measure.startYear // Respect startYear
                 ) {
                     Text(measure.name)
                 }
 
                 Spacer(modifier = Modifier.height(8.dp))
             }
+
+
         }
 
         // Bottom Section: Next and Back Buttons
@@ -206,6 +231,7 @@ fun FourthScreen(
                                 currentYearIndex++
                             } else {
                                 buttonEnabled = false // Disable the button after the last year
+                                showSummaryButton = true // Show summary button after last year
                             }
                         } catch (e: Exception) {
                             withContext(Dispatchers.Main) {
@@ -216,7 +242,31 @@ fun FourthScreen(
                 }, enabled = buttonEnabled) {
                     Text("Next")
                 }
-            } else {
+            }
+
+            if (showSummaryButton) {
+                Button(
+                    onClick = {
+                        CoroutineScope(Dispatchers.IO).launch {
+                            // Post logs to the infotext API
+                            val logText = logs.joinToString("\n") { it }
+                            networkService.postInfoText(
+                                "<h2>Summary</h2><p>${logText.replace("\n", "<br>")}</p>"
+                            )
+                            networkService.emitToggleOverlay(1806, display = true, type = "website")
+                            withContext(Dispatchers.Main) {
+                                Toast.makeText(context, "Summary displayed", Toast.LENGTH_SHORT).show()
+                                showSummaryButton = false
+                                buttonEnabled = false
+                            }
+                        }
+                    }
+                ) {
+                    Text("Zusammenfassung anzeigen")
+                }
+            }
+
+            if (!buttonEnabled && !showSummaryButton) {
                 // "Back to Third Page" Button
                 Button(onClick = {
                     CoroutineScope(Dispatchers.IO).launch {

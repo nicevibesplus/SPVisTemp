@@ -71,6 +71,7 @@ fun ThirdScreen(
                         networkService.emitToggleOverlay(1784, display = true, type = "website")
                         networkService.emitToggleOverlay(1775, display = true, type = "website")
                         networkService.emitToggleOverlay(1776, display = true, type = "website")
+                        networkService.emitToggleOverlay(1806, display = true, type = "website")
 
                         networkService.setLocation(locationId, "outdoor", selectedLocation)
                         withContext(Dispatchers.Main) {
