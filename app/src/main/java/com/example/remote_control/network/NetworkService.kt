@@ -137,7 +137,7 @@ class NetworkService {
 
 
     fun postTemperature(temperature: Double) {
-        // Round the temperature to 1 decimal place using the US locale
+        // Round the temperature to 1 decimal place
         val roundedTemperature = String.format(Locale.US, "%.1f", temperature).toDouble()
 
         val url = "http://giv-sitcomdev.uni-muenster.de:2000/api/temperature?value=$roundedTemperature"
@@ -209,6 +209,34 @@ class NetworkService {
                     Log.e("InfoTextPost", "API call unsuccessful: ${response.code}")
                 } else {
                     Log.d("InfoTextPost", "Infotext posted successfully: $infotext")
+                }
+            }
+        })
+    }
+
+    fun postSummary(summary: String) {
+        val url = "http://giv-sitcomdev.uni-muenster.de:2000/api/summary"
+        val jsonBody = """
+        {
+            "summary": "$summary"
+        }
+    """.trimIndent()
+
+        val request = Request.Builder()
+            .url(url)
+            .post(RequestBody.create("application/json".toMediaTypeOrNull(), jsonBody))
+            .build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                Log.e("SummaryPost", "Failed to post summary: ${e.message}")
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                if (!response.isSuccessful) {
+                    Log.e("SummaryPost", "API call unsuccessful: ${response.code}")
+                } else {
+                    Log.d("SummaryPost", "Summary posted successfully: $summary")
                 }
             }
         })

@@ -36,7 +36,7 @@ fun SecondScreen(
                     isLoading.value = true // Start loading
                     try {
                         // Toggle off and on overlays
-                        networkService.emitToggleOverlay(1792, display = false, type = "picture")
+                        networkService.emitToggleOverlay(1816, display = false, type = "picture")
                         networkService.emitToggleOverlay(1784, display = true, type = "website")
                         networkService.emitToggleOverlay(1775, display = true, type = "website")
                         networkService.emitToggleOverlay(1776, display = true, type = "website")
@@ -56,7 +56,7 @@ fun SecondScreen(
                             }
 
                             // Set initial temperature
-                            networkService.postTemperature(23.4)
+                            networkService.postTemperature(24.7)
                             networkService.postCalendar(2000, 5)
                             networkService.postInfoText(yearDetail.text)
                         }
@@ -79,7 +79,7 @@ fun SecondScreen(
                     modifier = Modifier.size(24.dp)
                 )
             } else {
-                Text("Toggle Overlay and Go to Fourth Page")
+                Text("START")
             }
         }
     }

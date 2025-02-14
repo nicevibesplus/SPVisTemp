@@ -45,7 +45,7 @@ fun ThirdScreen(
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        Text("Select Quality:")
+        Text("Select climate scenario:")
         Row {
             SwitchWithLabel("Low", selectedQuality == "low") {
                 if (it) selectedQuality = "low"
@@ -101,7 +101,7 @@ fun ThirdScreen(
                             }
 
                             // Set initial temperature
-                            networkService.postTemperature(23.4)
+                            networkService.postTemperature(24.7)
                             networkService.postCalendar(2000, 5)
                             networkService.postInfoText(yearDetail.text)
 

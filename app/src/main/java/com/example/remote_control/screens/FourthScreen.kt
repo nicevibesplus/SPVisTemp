@@ -31,8 +31,8 @@ fun FourthScreen(
     var buttonEnabled by remember { mutableStateOf(true) }
     var showSummaryButton by remember { mutableStateOf(false) } // Tracks summary button visibility
 
-    // Current temperature (starting value: 23.4)
-    var currentTemperature by remember { mutableStateOf(23.4) }
+    // Current temperature (starting value: 24.7)
+    var currentTemperature by remember { mutableStateOf(24.7) }
 
     // Measure-specific state
     val measures = DataProvider.locationSpecificMeasures[selectedLocation] ?: emptyList()
@@ -121,10 +121,10 @@ fun FourthScreen(
                     onClick = {
                         CoroutineScope(Dispatchers.IO).launch {
                             // Activate the current measure
-                            networkService.emitToggleOverlay(measure.id, display = true, type = "measure")
-                            networkService.emitToggleOverlay(measure.info, display = true, type = "info") // Toggle on info overlay
+                            networkService.emitToggleOverlay(measure.id, display = true, type = "picture")
+                            networkService.emitToggleOverlay(measure.info, display = true, type = "picture") // Toggle on info overlay
                             activeInfoOverlays.add(measure.info) // Track the active info overlay
-                            logs.add("Measure ${measure.name} activated in year ${years[currentYearIndex]-20}") // Log activation
+                            logs.add("Im Jahr ${years[currentYearIndex]-20} hast du ${measure.name} hinzugefügt ") // Log activation
 
                             withContext(Dispatchers.Main) {
                                 // Update the current temperature (reduce by tempChange)
@@ -248,9 +248,10 @@ fun FourthScreen(
                 Button(
                     onClick = {
                         CoroutineScope(Dispatchers.IO).launch {
-                            // Post logs to the infotext API
+                            // Post logs to the summary API
+                            logs.add("Die Temperatur ist von 24,7°C auf ${"%.1f".format(currentTemperature)} °C gestiegen.") // Log activation
                             val logText = logs.joinToString("\n") { it }
-                            networkService.postInfoText(
+                            networkService.postSummary(
                                 "<h2>Summary</h2><p>${logText.replace("\n", "<br>")}</p>"
                             )
                             networkService.emitToggleOverlay(1806, display = true, type = "website")
@@ -278,8 +279,8 @@ fun FourthScreen(
                             toggleAllOverlays(context, networkService, videoId)
                             delay(1000)
 
-                            // Step 2: Toggle on overlay 1791
-                            networkService.emitToggleOverlay(1791, display = true, type = "picture")
+                            // Step 2: Toggle on overlay 1822
+                            networkService.emitToggleOverlay(1822, display = true, type = "picture")
 
                             // Navigate back to the third screen
                             withContext(Dispatchers.Main) {
@@ -293,7 +294,7 @@ fun FourthScreen(
                         }
                     }
                 }) {
-                    Text("Back to Third Page")
+                    Text("Auswahlbildschirm")
                 }
             }
         }

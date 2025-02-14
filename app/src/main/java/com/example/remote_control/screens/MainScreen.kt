@@ -125,7 +125,7 @@ fun MainScreen(
 
         Button(
             onClick = {
-                networkService.emitToggleOverlay(1792, display = true, type = "picture")
+                networkService.emitToggleOverlay(1816, display = true, type = "picture")
                 onNavigate()
                 Log.d("MainScreen", "Navigating to Info Screen")
             },
